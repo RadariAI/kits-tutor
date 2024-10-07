@@ -28,7 +28,7 @@ _Last Updated: 07/10/2024_
 ```
 
 # Full Example (python)
-```
+```python
 import requests
 import json
 
