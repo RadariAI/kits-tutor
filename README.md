@@ -4,7 +4,7 @@
 This repository contains the readme file for the hosted chatbot service.
 
 
-_Last Updated: 07/10/2024_
+_Last Updated: 14/10/2024_
 
 ---
 
@@ -26,7 +26,11 @@ Returns 200 if the invoke is successful, 400 otherwise.
 #### JSON input format:
 ```json
 {
-    "latest_user_message": "你好，想找一個有經驗的老師專補小三"
+    "latest_user_message": "你好，想找一個有經驗的老師專補小三",
+    "existing_data": {
+        "name": "陳小明",
+        "school": "國際中學"
+    } # can be incomplete
 }
 ```
 
@@ -41,10 +45,14 @@ Complete collection:
 ```json
 {
     "data": {
+        "frequency": "兩天",
         "name": "陳小明",
         "phone_number": "67604087",
-        "requirement": "要一個有經驗的老師專補小三",
+        "region": "黃大仙",
+        "requirement": "",
         "school": "國際中學",
+        "student_form": "F3",
+        "student_gender": "男",
         "subjects": [
             "數學"
         ]
@@ -72,7 +80,11 @@ invoke_url = f'{base_url}/bot-invoke/{phone_number}'
 
 # Define your query
 query = {
-    "latest_user_message": "你好，想找一個有經驗的老師專補小三"
+    "latest_user_message": "你好，想找一個有經驗的老師專補小三",
+    "existing_data": {
+        "name": "陳小明",
+        "school": "國際中學"
+    }
 }
 
 # Set headers for the request (Content-Type is necessary for sending JSON)
