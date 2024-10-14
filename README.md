@@ -28,9 +28,8 @@ Returns 200 if the invoke is successful, 400 otherwise.
 {
     "latest_user_message": "你好，想找一個有經驗的老師專補小三",
     "existing_data": {
-        "name": "陳小明",
-        "school": "國際中學"
-    } # can be incomplete
+        "name": "陳小明"
+    }
 }
 ```
 
@@ -50,7 +49,6 @@ Complete collection:
         "phone_number": "67604087",
         "region": "黃大仙",
         "requirement": "",
-        "school": "國際中學",
         "student_form": "F3",
         "student_gender": "男",
         "subjects": [
@@ -82,8 +80,7 @@ invoke_url = f'{base_url}/bot-invoke/{phone_number}'
 query = {
     "latest_user_message": "你好，想找一個有經驗的老師專補小三",
     "existing_data": {
-        "name": "陳小明",
-        "school": "國際中學"
+        "name": "陳小明"
     }
 }
 
