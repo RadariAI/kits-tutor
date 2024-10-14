@@ -21,7 +21,8 @@ _Last Updated: 14/10/2024_
 - **Example:**  
   `https://kits-tutor-bot.up.railway.app/bot-invoke/67604087`
 
-Returns 200 if the invoke is successful, 400 otherwise. 
+Returns 200 if the invoke is successful, 400 otherwise.
+Returns 204 with empty content specifically if the server receives a new message within 10 seconds.
 
 #### JSON input format:
 ```json
